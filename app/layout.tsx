@@ -1,25 +1,27 @@
-import { ClerkProvider } from "@clerk/nextjs";
-import "./globals.css";
-import Pageheader from "@/components/page-header";
-import Script from "next/script";
+
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
+import './globals.css'
+import PageHeader from '@/components/page-header';
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <ClerkProvider>
       <html lang="en">
-        <head>
-          <title>WeCare</title>
-        </head>
         <body>
-        <script src="https://wecare-widget.vercel.app/widget.umd.js"></script>          <Pageheader />
-        <my-widget project-id="13"></my-widget>
-        {children}
+          <PageHeader />
+          {children}
         </body>
       </html>
     </ClerkProvider>
-  );
+  )
 }

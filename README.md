@@ -106,3 +106,4 @@ Once the project is set up, you can access the application at `http://localhost:
 2. Navigate to the "Payments" page.
 3. Manage existing subscriptions, make payments, or subscribe to new plans.
 
+
